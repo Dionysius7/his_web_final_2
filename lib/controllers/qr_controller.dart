@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter/foundation.dart';
 import 'package:tekartik_qrscan_flutter_web/qrscan_flutter_web.dart';
 
 class QRController extends GetxController {
@@ -35,11 +34,10 @@ class QRController extends GetxController {
 
   Future scansQrCode(BuildContext context) async {
     if (GetPlatform.isWeb) {
-      var data = await scanQrCode(context);
-      // setState(() {
+      var title = "Scan Your QR Code";
+      var data = await scanQrCode(context, title: title);
       resultDataId.value = data!;
       print("Data qr ->${resultDataId.value}");
-      // });
     } else {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Only supported on the web')));

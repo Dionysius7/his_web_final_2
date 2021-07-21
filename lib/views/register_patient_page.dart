@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:his_web_final/controllers/notif_data_phr_controller.dart';
 import 'package:his_web_final/controllers/qr_controller.dart';
 import 'package:his_web_final/widgets/bottom_bar.dart';
 import 'package:get/get.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class RegisterPatientPage extends StatelessWidget {
   static final _formKey = GlobalKey<FormState>();
@@ -10,6 +12,7 @@ class RegisterPatientPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final qrController = Get.put(QRController());
+    final notifDataController = Get.put(NotifDataController());
     final TextEditingController phrIdController = TextEditingController();
 
     return Scaffold(
@@ -73,6 +76,9 @@ class RegisterPatientPage extends StatelessWidget {
                                       children: [
                                         Expanded(
                                           child: TextFormField(
+                                            cursorColor: Colors.white,
+                                            style:
+                                                TextStyle(color: Colors.white),
                                             controller: phrIdController,
                                             decoration: InputDecoration(
                                               border: InputBorder.none,
@@ -80,6 +86,13 @@ class RegisterPatientPage extends StatelessWidget {
                                               hintStyle: TextStyle(
                                                   color: Colors.white),
                                             ),
+                                            validator: (value) {
+                                              if (value == null ||
+                                                  value.isEmpty) {
+                                                return 'Phr Id is required';
+                                              }
+                                              return null;
+                                            },
                                           ),
                                         ),
                                         Container(
@@ -118,7 +131,28 @@ class RegisterPatientPage extends StatelessWidget {
                                 width: size.width / 5,
                                 child: MaterialButton(
                                     child: Text("REGISTER"),
-                                    onPressed: () {},
+                                    onPressed: () async {
+                                      if (_formKey.currentState!.validate()) {
+                                        EasyLoading.show(
+                                            status: "Loading...",
+                                            maskType:
+                                                EasyLoadingMaskType.black);
+                                        var resultMessage =
+                                            await notifDataController
+                                                .postPatientNotif(
+                                                    phrIdController.text);
+                                        if (resultMessage == "200") {
+                                          EasyLoading.showSuccess(
+                                              "Notification Sent");
+                                        } else {
+                                          EasyLoading.dismiss();
+                                          Get.defaultDialog(
+                                              title: "Response",
+                                              content: Text(
+                                                  resultMessage.toString()));
+                                        }
+                                      }
+                                    },
                                     color: Color(0xff008c74),
                                     textColor: Colors.white,
                                     padding: EdgeInsets.symmetric(
