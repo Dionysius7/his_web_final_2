@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:his_web_final/views/landing_page.dart';
 import 'package:get/get.dart';
-import 'package:his_web_final/views/test_page.dart';
 
 void main() {
   runApp(MyApp());
