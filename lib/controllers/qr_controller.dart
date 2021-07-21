@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:barcode_scan2/barcode_scan2.dart';
+import 'package:tekartik_qrscan_flutter_web/qrscan_flutter_web.dart';
+import 'package:flutter/foundation.dart';
 
 class QRController extends GetxController {
   RxString imgUrl = "".obs;
@@ -18,5 +21,15 @@ class QRController extends GetxController {
     ScanResult result = await BarcodeScanner.scan(options: options);
     resultDataId = result.rawContent.toString().obs;
     isLoading.value = false;
+  }
+
+  Future scanQrCode(context) async {
+    if (kIsWeb) {
+      var data = await scanQrCode(context);
+      resultDataId = data;
+    } else {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text('Only supported on the web')));
+    }
   }
 }

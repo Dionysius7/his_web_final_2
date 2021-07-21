@@ -95,7 +95,8 @@ class RegisterPatientPage extends StatelessWidget {
                                           ),
                                           child: InkWell(
                                             onTap: () async {
-                                              await qrController.scanImage();
+                                              await qrController
+                                                  .scanQrCode(context);
                                               phrIdController.text =
                                                   qrController
                                                       .resultDataId.value;
