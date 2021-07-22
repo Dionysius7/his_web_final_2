@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:his_web_final/controllers/notif_data_phr_controller.dart';
 import 'package:his_web_final/controllers/qr_controller.dart';
+import 'package:his_web_final/views/register_patient_response_page.dart';
 import 'package:his_web_final/widgets/bottom_bar.dart';
 import 'package:get/get.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -142,14 +143,15 @@ class RegisterPatientPage extends StatelessWidget {
                                                 .postPatientNotif(
                                                     phrIdController.text);
                                         if (resultMessage == "200") {
-                                          EasyLoading.showSuccess(
-                                              "Notification Sent");
+                                          EasyLoading.dismiss();
+                                          Get.off(RegisterPatientResponsePage(
+                                            responseStatus: "success",
+                                          ));
                                         } else {
                                           EasyLoading.dismiss();
-                                          Get.defaultDialog(
-                                              title: "Response",
-                                              content: Text(
-                                                  resultMessage.toString()));
+                                          Get.to(RegisterPatientResponsePage(
+                                            responseStatus: "failed",
+                                          ));
                                         }
                                       }
                                     },

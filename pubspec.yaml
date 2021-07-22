@@ -57,6 +57,8 @@ flutter:
     - assets/landing_page.png
     - assets/register_menu_icon.png
     - assets/search_menu_icon.png
+    - assets/success_response.png
+    - assets/error_response.png
     # include js_qr javascript file
     # - packages/tekartik_js_qr/js_qr.js
   #   - images/a_dot_ham.jpeg
