@@ -42,7 +42,7 @@ class MenuPage extends StatelessWidget {
               children: [
                 MaterialButton(
                   onPressed: () {
-                    Get.to(RegisterPatientPage());
+                    Get.toNamed('/menu/register');
                   },
                   child: Card(
                     shape: RoundedRectangleBorder(
@@ -78,7 +78,7 @@ class MenuPage extends StatelessWidget {
                 SizedBox(width: size.width / 10),
                 MaterialButton(
                   onPressed: () {
-                    Get.to(SearchPatientPage());
+                    Get.toNamed('/menu/search');
                   },
                   child: Card(
                     shape: RoundedRectangleBorder(

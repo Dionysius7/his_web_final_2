@@ -42,6 +42,7 @@ dev_dependencies:
   get: ^4.1.4
   get_storage: ^2.0.3
   http: ^0.13.3
+  url_strategy: ^0.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

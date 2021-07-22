@@ -51,7 +51,8 @@ class LandingPage extends StatelessWidget {
                                 fontSize: size.width / 80),
                           ),
                           onPressed: () {
-                            Get.to(MenuPage());
+                            // Get.to(MenuPage());
+                            Get.toNamed('/menu');
                           },
                           color: Colors.white,
                           textColor: Color(0xff008c74),

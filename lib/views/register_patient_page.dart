@@ -23,7 +23,28 @@ class RegisterPatientPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: size.width,
+                  padding: EdgeInsets.all(20),
+                  child: InkWell(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Text(
+                      "<  Back",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -149,7 +170,7 @@ class RegisterPatientPage extends StatelessWidget {
                                           ));
                                         } else {
                                           EasyLoading.dismiss();
-                                          Get.to(RegisterPatientResponsePage(
+                                          Get.off(RegisterPatientResponsePage(
                                             responseStatus: "failed",
                                           ));
                                         }

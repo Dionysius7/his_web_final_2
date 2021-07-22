@@ -38,4 +38,7 @@ class Const {
       "https://us-central1-his-api-93700.cloudfunctions.net/notification/patient/";
   final String hospitalNotifPostCondition =
       "https://us-central1-his-api-93700.cloudfunctions.net/notification/condition/";
+
+  final String hospitalPatientSearch =
+      "https://us-central1-his-api-93700.cloudfunctions.net/patient/";
 }

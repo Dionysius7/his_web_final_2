@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:his_web_final/widgets/bottom_bar.dart';
 import 'package:get/get.dart';
 
-class RegisterPatientResponsePage extends StatelessWidget {
-  const RegisterPatientResponsePage({required this.responseStatus});
+class SearchPatientResponsePage extends StatelessWidget {
+  const SearchPatientResponsePage({required this.responseStatus});
   final String responseStatus;
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class RegisterPatientResponsePage extends StatelessWidget {
                                   ),
                                   SizedBox(height: size.height / 40),
                                   Text(
-                                    "Notification Sent",
+                                    "Patient Found",
                                     style: TextStyle(
                                       color: Color(0xff008c74),
                                       fontSize: 30,
@@ -51,7 +51,7 @@ class RegisterPatientResponsePage extends StatelessWidget {
                                   ),
                                   SizedBox(height: size.height / 80),
                                   Text(
-                                    "Please check your mobile app notification",
+                                    "Thankyou for your patience",
                                     style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -85,7 +85,7 @@ class RegisterPatientResponsePage extends StatelessWidget {
                                   ),
                                   SizedBox(height: size.height / 40),
                                   Text(
-                                    "PHR ID Not Found",
+                                    "Patient Not Found",
                                     style: TextStyle(
                                       color: Color(0xff008c74),
                                       fontSize: 30,
