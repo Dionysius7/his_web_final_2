@@ -42,6 +42,7 @@ dev_dependencies:
   get: ^4.1.4
   get_storage: ^2.0.3
   http: ^0.13.3
+  intl: ^0.17.0
   url_strategy: ^0.2.0
 
 # For information on the generic Dart part of this file, see the
@@ -58,6 +59,7 @@ flutter:
     - assets/landing_page.png
     - assets/register_menu_icon.png
     - assets/search_menu_icon.png
+    - assets/condition_menu_icon.png
     - assets/success_response.png
     - assets/error_response.png
     # include js_qr javascript file

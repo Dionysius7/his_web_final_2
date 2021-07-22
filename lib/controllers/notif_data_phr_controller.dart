@@ -30,7 +30,7 @@ class NotifDataController extends GetxController {
     var result = jsonDecode(response.body);
 
     if (response.statusCode == 200) {
-      return result['data']['message'];
+      return response.statusCode.toString();
     } else {
       return result['message'];
     }
