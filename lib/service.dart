@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
+
+import 'models/disease.dart';
 
 class Service {
   final Map<String, String> contentType = {"Content-Type": "application/json"};
@@ -51,5 +55,11 @@ class Service {
     var finalUrl = Uri.parse(url + status + '/' + notifId);
     print(finalUrl);
     return http.put(finalUrl, headers: contentType);
+  }
+
+  Future getQueryDisease(url, query) {
+    var finalUrl = Uri.parse('$url$query');
+    print(finalUrl);
+    return http.get(finalUrl);
   }
 }

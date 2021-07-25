@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:his_web_final/controllers/hospital_condition_controller.dart';
-import 'package:his_web_final/controllers/notif_data_phr_controller.dart';
 import 'package:his_web_final/controllers/qr_controller.dart';
-import 'package:his_web_final/views/register_patient_response_page.dart';
 import 'package:his_web_final/views/search_condition_error_page.dart';
 import 'package:his_web_final/views/search_condition_success_page.dart';
 import 'package:his_web_final/widgets/bottom_bar.dart';

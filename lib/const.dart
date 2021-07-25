@@ -1,4 +1,5 @@
 class Const {
+  final String hospitalName = "Rumah Sakit Sobat Sehat Satu";
   final String genderSystem = "http://hl7.org/fhir/administrative-gender";
   final String nikSystem = "https://us-central1-phr-api.cloudfunctions.net/nik";
   final String bpjsSystem =
@@ -41,4 +42,7 @@ class Const {
 
   final String hospitalPatientSearch =
       "https://us-central1-his-api-93700.cloudfunctions.net/patient/";
+
+  final String diseaseUrl =
+      "https://us-central1-phr-api.cloudfunctions.net/disease/";
 }
