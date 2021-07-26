@@ -30,6 +30,7 @@ class HospitalConditionController extends GetxController {
   //Create Condition
   Future<String> postConditionData() async {
     var categoryDisplay = "";
+    // ignore: unrelated_type_equality_checks
     if (selectedCategory == "encounter-diagnosis") {
       categoryDisplay = "Encounter Diagnosis";
     } else {
@@ -71,20 +72,6 @@ class HospitalConditionController extends GetxController {
       return e.toString();
     }
   }
-
-  // Future<String> postConditionData(data, phrIds) async {
-  //   var cModel = data;
-  //   var response = await service.postConditionData(
-  //       constant.hospitalConditionPost, jsonEncode(cModel.toJson()), phrIds);
-
-  //   var result = jsonDecode(response.body);
-
-  //   if (response.statusCode == 201) {
-  //     return result['message'];
-  //   } else {
-  //     return result['error'].toString();
-  //   }
-  // }
 
   //Search Patient Condition in Hospital Data
   Future<String> getHospitalConditionData(phrIds) async {

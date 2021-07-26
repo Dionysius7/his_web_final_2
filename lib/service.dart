@@ -1,46 +1,9 @@
-import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-
-import 'models/disease.dart';
 
 class Service {
   final Map<String, String> contentType = {"Content-Type": "application/json"};
 
-  Future searchHospitalPatient(url, phrId) {
-    var finalUrl = Uri.parse(url + phrId);
-    return http.get(finalUrl);
-  }
-
-  Future postPatientData(url, body) {
-    return http.post(url, headers: contentType, body: body);
-  }
-
-  Future getPatientData(url, phrId) {
-    var finalUrl = Uri.parse(url + phrId);
-    return http.get(finalUrl);
-  }
-
-  Future getPatientDataByPhone(url, phone) {
-    var finalUrl = Uri.parse(url + phone);
-    return http.get(finalUrl);
-  }
-
-  Future getAllPatientData(url) {
-    var finalUrl = Uri.parse(url);
-    return http.get(finalUrl);
-  }
-
-  Future getAllNotifData(url, phrId) {
-    var finalUrl = Uri.parse(url + phrId);
-    return http.get(finalUrl);
-  }
-
-  Future postNotifToPHR(url, phrId) {
-    var finalUrl = Uri.parse(url + phrId);
-    return http.post(finalUrl, headers: contentType);
-  }
-
+  //Condition Related API Service
   Future getAllConditionData(url, phrId) {
     var finalUrl = Uri.parse(url + phrId);
     return http.get(finalUrl);
@@ -51,15 +14,21 @@ class Service {
     return http.post(finalUrl, headers: contentType, body: body);
   }
 
-  Future updatePHRNotifStatus(url, status, notifId) {
-    var finalUrl = Uri.parse(url + status + '/' + notifId);
-    print(finalUrl);
-    return http.put(finalUrl, headers: contentType);
-  }
-
   Future getQueryDisease(url, query) {
     var finalUrl = Uri.parse('$url$query');
     print(finalUrl);
+    return http.get(finalUrl);
+  }
+
+  //Notification Related API Service
+  Future postNotifToPHR(url, phrId) {
+    var finalUrl = Uri.parse(url + phrId);
+    return http.post(finalUrl, headers: contentType);
+  }
+
+  //Patient Related API Service
+  Future searchHospitalPatient(url, phrId) {
+    var finalUrl = Uri.parse(url + phrId);
     return http.get(finalUrl);
   }
 }
