@@ -56,7 +56,7 @@ class CreateConditionPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   width: size.width / 2,
-                  height: size.height / 1.5,
+                  height: size.height / 1.4,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -562,7 +562,7 @@ class CreateConditionPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: size.height / 40),
+                            SizedBox(height: size.height / 30),
                             Container(
                               width: size.width / 6,
                               child: MaterialButton(
