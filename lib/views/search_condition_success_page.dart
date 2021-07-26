@@ -68,7 +68,7 @@ class SearchConditionSuccessPage extends StatelessWidget {
                                                       .condition.length,
                                               itemBuilder: (context, index) {
                                                 return Container(
-                                                  width: size.width / 20,
+                                                  width: size.width / 15,
                                                   color: Colors.grey[100],
                                                   child: ListTile(
                                                     title: Row(
@@ -85,7 +85,7 @@ class SearchConditionSuccessPage extends StatelessWidget {
                                                           padding: EdgeInsets
                                                               .symmetric(
                                                             vertical: 15,
-                                                            horizontal: 20,
+                                                            horizontal: 5,
                                                           ),
                                                           child: Column(
                                                             mainAxisAlignment:
@@ -180,9 +180,7 @@ class SearchConditionSuccessPage extends StatelessWidget {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: [
-                                              CircularProgressIndicator(
-                                                color: Color(0xff008c74),
-                                              ),
+                                              CircularProgressIndicator(),
                                             ],
                                           ),
                                         );
