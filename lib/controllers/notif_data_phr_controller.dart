@@ -4,13 +4,11 @@ import 'package:get/get.dart';
 import 'package:his_web_final/const.dart';
 import 'package:his_web_final/models/notification.dart';
 import 'package:his_web_final/service.dart';
-import 'package:get_storage/get_storage.dart';
 
 class NotifDataController extends GetxController {
   var notification = <NotifModel>[].obs;
   var service = new Service();
   var constant = new Const();
-  GetStorage sessionData = GetStorage();
 
   Future<String> postPatientNotif(phrIds) async {
     var response =

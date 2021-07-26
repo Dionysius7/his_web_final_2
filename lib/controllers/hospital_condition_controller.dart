@@ -4,7 +4,6 @@ import 'package:his_web_final/const.dart';
 import 'package:his_web_final/models/condition.dart';
 import 'package:his_web_final/models/disease.dart';
 import 'package:his_web_final/service.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:flutter/material.dart';
 
 class HospitalConditionController extends GetxController {
@@ -12,7 +11,6 @@ class HospitalConditionController extends GetxController {
   RxList<DiseaseModel> disease = <DiseaseModel>[].obs;
   var service = new Service();
   var constant = new Const();
-  GetStorage sessionData = GetStorage();
   RxString selectedCategory = "encounter-diagnosis".obs;
   List categoryList = ["encounter-diagnosis", "problem-list-item"];
 
