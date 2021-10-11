@@ -31,7 +31,7 @@ class BottomBar extends StatelessWidget {
                   TextSpan(
                       text: "Copyright", style: TextStyle(color: Colors.white)),
                   TextSpan(
-                    text: " Rumah Sakit Sobat Sehat Satu. ",
+                    text: " Rumah Sakit Sobat Sehat Dua. ",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),

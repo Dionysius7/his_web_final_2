@@ -24,7 +24,7 @@ class DashboardPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        "Main Menu",
+                        "Main Menu DUA",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: size.width / 30,

@@ -1,6 +1,6 @@
 class Const {
   //Hospital Name
-  final String hospitalName = "Rumah Sakit Sobat Sehat Satu";
+  final String hospitalName = "Rumah Sakit Sobat Sehat Dua";
 
   //System Variable
   final String categorySystem =
@@ -14,19 +14,19 @@ class Const {
 
   //Condition Const
   final String hospitalConditionPost =
-      "https://us-central1-his-api-93700.cloudfunctions.net/condition/";
+      "https://us-central1-his-api-83700.cloudfunctions.net/condition/";
   final String hospitalConditionGet =
-      "https://us-central1-his-api-93700.cloudfunctions.net/condition/";
+      "https://us-central1-his-api-83700.cloudfunctions.net/condition/";
   final String diseaseUrl =
       "https://us-central1-phr-api.cloudfunctions.net/disease/";
 
   //Notification Const
   final String hospitalNotifPostPatient =
-      "https://us-central1-his-api-93700.cloudfunctions.net/notification/patient/";
+      "https://us-central1-his-api-83700.cloudfunctions.net/notification/patient/";
   final String hospitalNotifPostCondition =
-      "https://us-central1-his-api-93700.cloudfunctions.net/notification/condition/";
+      "https://us-central1-his-api-83700.cloudfunctions.net/notification/condition/";
 
   //Patient Const
   final String hospitalPatientSearch =
-      "https://us-central1-his-api-93700.cloudfunctions.net/patient/";
+      "https://us-central1-his-api-83700.cloudfunctions.net/patient/";
 }

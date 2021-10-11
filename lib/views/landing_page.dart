@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Rumah Sakit \nSobat Sehat Satu",
+                        "Rumah Sakit \nSobat Sehat Dua",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: size.width / 40,
@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
                         height: size.height / 80,
                       ),
                       Text(
-                        "Kesehatan anda adalah prioritas \nutama kami, rumah sakit sobat \nsehat satu saling membantu ",
+                        "Kesehatan anda adalah prioritas \nutama kami, rumah sakit sobat \nsehat dua saling membantu ",
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: size.width / 80,
